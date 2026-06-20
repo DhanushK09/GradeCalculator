@@ -1,10 +1,21 @@
 function calculate() {
-    let marks = document.getElementById("marks").value;
 
-    if (marks >= 90)
-        result.innerText = "Grade A";
-    else if (marks >= 75)
-        result.innerText = "Grade B";
-    else
-        result.innerText = "Grade C";
+    let marks = document.getElementById("marks").value;
+    let grade;
+
+    if (marks >= 90) {
+        grade = "A";
+    }
+    else if (marks >= 75) {
+        grade = "B";
+    }
+    else if (marks >= 50) {
+        grade = "C";
+    }
+    else {
+        grade = "F";
+    }
+
+    document.getElementById("result").innerText =
+        "Your Grade: " + grade;
 }
